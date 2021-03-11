@@ -23,11 +23,11 @@ My project includes the following files:
 #### 2. Submission includes functional code
 First of all, you can make model.h5 by executing model.py script like below.
 ```
-python3 model.py
+python model.py
 ```
 It is used for a provided Udacity simulator and drive.py file, the car can be driven autonomously around the track by executing 
 ```
-python3 drive.py model.h5
+python drive.py model.h5
 ```
 
 #### 3. Submission code is usable and readable
@@ -40,11 +40,11 @@ The model.py file contains the code for collecting three camera images and each 
 #### 1. An appropriate model architecture has been employed
 
 First of all, I refer to NIVIDA CNN architecture. Therefore, my model consists like below.   
-01. A convolutional neural network with 24 filters, 5x5 kernel, 2x2 stride, and RELU activation function.     
-02. A convolutional neural network with 36 filters, 5x5 kernel, 2x2 stride, and RELU activation function.     
-03. A convolutional neural network with 48 filters, 5x5 kernel, 2x2 stride, and RELU activation function.     
-04. A convolutional neural network with 64 filters, 3x3 kernel, and RELU activation function.     
-05. A convolutional neural network with 64 filters, 3x3 kernel, and RELU activation function.     
+01. Convolution layer with 24 filters, 5x5 kernel, 2x2 stride, and RELU activation function.     
+02. Convolution layer with 36 filters, 5x5 kernel, 2x2 stride, and RELU activation function.     
+03. Convolution layer with 48 filters, 5x5 kernel, 2x2 stride, and RELU activation function.     
+04. Convolution layer with 64 filters, 3x3 kernel, and RELU activation function.     
+05. Convolution layer with 64 filters, 3x3 kernel, and RELU activation function.     
 06. Flatten connected layer with output 100.   
 07. Flatten connected layer with output 50.    
 08. Flatten connected layer with output 10.    
@@ -86,24 +86,24 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 #### 2. Final Model Architecture
 
 The final model architecture is like below.   
-01. A lambda layer to parallelize image normalization.   
-02. A cropping layer with top=70, bottom=25, left=0, and right=0.
-03. A convolutional neural network with 24 filters, 5x5 kernel, 2x2 stride, and RELU activation function.   
-04. A droup out layer with 0.2 rate.   
-05. A convolutional neural network with 36 filters, 5x5 kernel, 2x2 stride, and RELU activation function.   
-06. A droup out layer with 0.2 rate.   
-07. A convolutional neural network with 48 filters, 5x5 kernel, 2x2 stride, and RELU activation function.   
-08. A droup out layer with 0.2 rate.   
-09. A convolutional neural network with 64 filters, 3x3 kernel, and RELU activation 0function.   
-10. A droup out layer with 0.2 rate.   
-11. A convolutional neural network with 64 filters, 3x3 kernel, and RELU activation function.   
-12. A droup out layer with 0.2 rate.   
+01. Lambda layer to parallelize image normalization.   
+02. Cropping2D layer with top=70, bottom=25, left=0, and right=0.
+03. Convolution2D layer with 24 filters, 5x5 kernel, 2x2 stride, and RELU activation function.   
+04. Dropout layer with 0.2 rate.   
+05. Convolution2D with 36 filters, 5x5 kernel, 2x2 stride, and RELU activation function.   
+06. Dropout layer with 0.2 rate.   
+07. Convolution2D with 48 filters, 5x5 kernel, 2x2 stride, and RELU activation function.   
+08. Dropout layer with 0.2 rate.   
+09. Convolution2D with 64 filters, 3x3 kernel, and RELU activation 0function.   
+10. Dropout layer with 0.2 rate.   
+11. Convolution2D with 64 filters, 3x3 kernel, and RELU activation function.   
+12. Dropout layer with 0.2 rate.   
 13. Flatten connected layer with output 100.   
-14. A droup out layer with 0.5 rate.   
+14. Dropout layer with 0.5 rate.   
 15. Flatten connected layer with output 50.   
-16. A droup out layer with 0.5 rate.   
+16. Dropout layer with 0.5 rate.   
 17. Flatten connected layer with output 10.   
-18. A droup out layer with 0.5 rate.   
+18. Dropout layer with 0.5 rate.   
 19. Flatten connected layer with output 1.   
 20. Adam Optimizer and mean squared error loss. 
 
