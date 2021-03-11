@@ -94,7 +94,7 @@ The final model architecture is like below.
 06. Dropout layer with 0.2 rate.   
 07. Convolution2D with 48 filters, 5x5 kernel, 2x2 stride, and RELU activation function.   
 08. Dropout layer with 0.2 rate.   
-09. Convolution2D with 64 filters, 3x3 kernel, and RELU activation 0function.   
+09. Convolution2D with 64 filters, 3x3 kernel, and RELU activation function.   
 10. Dropout layer with 0.2 rate.   
 11. Convolution2D with 64 filters, 3x3 kernel, and RELU activation function.   
 12. Dropout layer with 0.2 rate.   
